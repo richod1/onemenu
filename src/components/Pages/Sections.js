@@ -11,7 +11,10 @@ function Sections() {
         .then((response)=>{
             setContent(response.data);
         })
-    })
+        .catch((err)=>{
+            console.log(err);
+        })
+    },[])
   return (
     <div>
         <Container>
@@ -51,3 +54,10 @@ const ContentFoods=styled.h3`
 const ContentDescription=styled.p`
 
 `
+
+
+
+
+
+
+
