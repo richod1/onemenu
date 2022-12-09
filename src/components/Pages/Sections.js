@@ -1,19 +1,18 @@
 import React,{useEffect, useState} from 'react'
 import styled from 'styled-components'
-import axios from 'axios';
+// import axios from 'axios';
 
 function Sections() {
     const [content,setContent]=useState([]);
 
     useEffect(()=>{
-        axios 
-        .get("")
-        .then((response)=>{
-            setContent(response.data);
-        })
-        .catch((err)=>{
-            console.log(err);
-        })
+        // axios 
+        fetch("")
+        .then((response)=> response.json())
+        .then((json)=>setContent(json));
+        // .catch((err)=>{
+        //     console.log(err);
+        // })
     },[])
   return (
     <div>
@@ -21,8 +20,8 @@ function Sections() {
         <Wrapper>
             <ContentImg></ContentImg>
             <ContentName></ContentName>
-            <ContentLocation></ContentLocation>
             <ContentFoods></ContentFoods>
+            <ContentLocation></ContentLocation>
             <ContentDescription></ContentDescription>
         </Wrapper>
         </Container>
