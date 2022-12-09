@@ -37,6 +37,7 @@ function Products() {
 export default Products
 const Container=styled.div`
 height:700px;
+max-width:100%;
 display:flex;
 aliign-items:center;
 flex-direction:column;
@@ -60,18 +61,18 @@ text-align:center;
 }
 `
 const Content=styled.div`
-max-width:100px;
+max-width:100%;
 margin:0;
 display:flex;
 // grid-templete-columns:1fr 1fr 1fr ;
 align-items:center;
-
+justify-content:center;
 gap:16px;
 padding:0 50px;
-@media screen and( max-width: 1000px){
+@media screen and( max-width: 780px){
     grid-templete-columns:1fr 1fr 1fr ;
 }
-@media screen and(max-width: 760px){
+@media screen and(max-width: 460px){
     grid-templete-columns:1fr;
     padding:0 20px;
 }
