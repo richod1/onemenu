@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Button } from 'react-bootstrap'
+import { BsMenuApp , BsMap , BsFillCursorFill, BsHouse,BsInfoCircle } from "react-icons/bs";
+import { VscDebugStepInto } from "react-icons/vsc";
 
 function NavBar() {
   return (
@@ -8,22 +11,25 @@ function NavBar() {
             <Nav>
                <NavMenu>
                 <NavItems>
-                    <NavLink>HOME</NavLink>
+                    <NavLink>HOME <BsHouse/></NavLink>
                 </NavItems>
                 <NavItems>
-                    <NavLink>EXPLORE</NavLink>
+                    <NavLink>EXPLORE <BsFillCursorFill/></NavLink>
                 </NavItems>
                 <NavItems>
-                    <NavLink>ONEMENU</NavLink>
+                    <NavLink>ONEMENU <BsMenuApp/></NavLink>
                 </NavItems>
                 <NavItems>
-                    <NavLink>ONEPLACE</NavLink>
+                    <NavLink>ONEPLACE <BsMap/></NavLink>
                 </NavItems>
                 <NavItems>
-                    <NavLink>ABOUT</NavLink>
+                    <NavLink>ABOUT <BsInfoCircle/></NavLink>
                 </NavItems>
                </NavMenu>
             </Nav>
+            <Navbtn>
+                <NavbtnLink>JOIN <VscDebugStepInto/></NavbtnLink>
+               </Navbtn>
         </Container>
     </div>
   )
@@ -40,6 +46,7 @@ padding:0 30px;
 margin-right:20px;
 margin-top:10px;
 margin-left:10px;
+margin-bottom:20px;
 border:none;
 justify-content:space-between;
 align-items:center;
@@ -93,6 +100,29 @@ white-space:nowrap;
     color:#fff;
     font-size:1.2rem;
     border-radius:10px;
+    transition:all 0.2s ease-in-out;
     
+}
+`
+const Navbtn=styled.div`
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:20px;
+`
+
+const NavbtnLink=styled(Button)`
+text-decoration:none;
+outline:none;
+border-radius:10px;
+background:powderblue;
+border:none;
+padding:0.6rem 1rem;
+color:#000;
+cursor:pointer;
+&:hover{
+    background:#010607;
+    transition:all 0.2s ease-in-out;
+    color:#fff;
 }
 `
