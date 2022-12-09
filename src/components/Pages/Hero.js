@@ -75,7 +75,7 @@ z-index:3;
 max-width:100vw;
 height:85vh;
 padding:5px 24px;
-position:fixed;
+position:absolute;
 display:flex;
 flex-direction:column;
 align-items:center;
