@@ -7,26 +7,30 @@ function Sections() {
 
     useEffect(()=>{
         // axios 
-        fetch("")
+        fetch('https://fakestoreapi.com/products')
         .then((response)=> response.json())
-        .then((json)=>setContent(json));
-        // .catch((err)=>{
-        //     console.log(err);
-        // })
+        .then((json)=>setContent(json))
+        .catch((err)=>{
+            console.log(err);
+        })
     },[])
   return (
     <div>
-        <Container>
-        <Wrapper>
-            <ContentImg></ContentImg>
-            <ContentName></ContentName>
-            <ContentFoods></ContentFoods>
-            <ContentLocation></ContentLocation>
-            <ContentDescription></ContentDescription>
-        </Wrapper>
-        </Container>
-
-    </div>
+            {content.map((contents)=>(
+              <Container>
+              <Wrapper>
+              <ContentImg>{content.image}</ContentImg>
+              <ContentName>{contents.title}</ContentName>
+              <ContentFoods>{contents.category}</ContentFoods>
+              <ContentLocation>{content.price}</ContentLocation>
+              <ContentDescription>{content.description}</ContentDescription>
+            </Wrapper>
+            </Container>
+    
+        
+            ))}
+            </div>
+        
   )
 }
 
