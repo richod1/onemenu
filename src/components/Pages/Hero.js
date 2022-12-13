@@ -9,7 +9,7 @@ function Hero() {
         <Container>
             <LogoContainer>
         <Logo1>
-            <img src="https://o.remove.bg/downloads/bbdb7484-fc58-4797-bfd8-5a752d7b78e9/images-removebg-preview.png" alt="Logo"/>    
+            <img src="" alt="Logo"/>    
             </Logo1>
             </LogoContainer>
         <HeroSection>
@@ -44,6 +44,8 @@ display:flex;
 position:fixed;
 overflow:hidden;
 cursor:pointer;
+object-fit:contain;
+mix-blend-mode:color-burn;
 `
 const LogoContainer=styled.div`
 height:100%;
