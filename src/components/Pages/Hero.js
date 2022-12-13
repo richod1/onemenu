@@ -32,14 +32,21 @@ display:flex;
 justify-content:center;
 align-items:center;
 padding:0 30px;
+width:1000px;
 height:800px;
 position:relative;
 z-index:1
+
+
+@media screen and(max-width:760px){
+    width:50%;
+    height:400px;
+}
 `
 const Logo1=styled.div`
 z-index:3;
 height:50px;
-width:50px;
+width:15%;
 display:flex;
 position:fixed;
 overflow:hidden;
@@ -81,6 +88,11 @@ position:absolute;
 display:flex;
 flex-direction:column;
 align-items:center;
+
+@media screen and(max-width:760px){
+    width:50vw;
+    height:43vh;
+}
 `
 const H1=styled.h1`
 color:#fff;

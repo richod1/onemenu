@@ -3,82 +3,27 @@ import styled from 'styled-components'
 //  import axios from 'axios';
 
 function Sections() {
-    const [content,setContent]=useState([
-      {
-        id:1,
-        image:"",
-        title:"",
-        category:"",
-        price:30,
-        description:""
-      },
-      {
-        id:2,
-        image:"",
-        title:"",
-        category:"",
-        price:30,
-        description:""
-      },
-      {
-        id:3,
-        image:"",
-        title:"",
-        category:"",
-        price:30,
-        description:""
-      },
-      {
-        id:4,
-        image:"",
-        title:"",
-        category:"",
-        price:30,
-        description:""
-      },
-      {
-        id:5,
-        image:"",
-        title:"",
-        category:"",
-        price:30,
-        description:""
-      },
-      {
-        id:6,
-        image:"",
-        title:"",
-        category:"",
-        price:30,
-        description:""
-      },
-      {
-        id:7,
-        image:"",
-        title:"",
-        category:"",
-        price:30,
-        description:"hello am done the api"
-      }
-    ]);
+    const [content,setContent]=useState([]);
     // setContent(content);
     
 
-    // useEffect(()=>{
-    //     axios 
-    //     .get('https://fakestoreapi.com/products')
-    //     .then((response)=> response.json())
-    //     .then((json)=>setContent(json))
-    //     .catch((err)=>{
-    //         console.log(err);
-    //     })
-    // },[])
+    useEffect(()=>{
+        // axios 
+        fetch('https://fakestoreapi.com/products')
+        .then((response)=> response.json())
+        .then((json)=>setContent(json))
+        .catch((err)=>{
+            console.log(err);
+        })
+    },[])
   return (
     <div>
             {content.map((contents)=>(
               <Container>
               <Wrapper>
-              <ContentImg>{contents.image}</ContentImg>
+              <ContentImg>
+                <img src={contents.image} alt="tis is the images"/>
+              </ContentImg>
               <ContentName>{contents.title}</ContentName>
               <ContentFoods>{contents.category}</ContentFoods>
               <ContentLocation>{contents.price}</ContentLocation>
@@ -95,14 +40,25 @@ function Sections() {
 
 export default Sections
 const Container=styled.div`
+display:flex;
+flext-direction:flex-start;
+border:1px solid black;
+background:#fff;
+width:72px;
+hieght:68px;
 
 `
 const Wrapper=styled.div`
-
+border:1px solid black;
+background:#fff;
 `
-const ContentImg=styled.div`
-
+const ContentImg = styled.div`
+border:2px solid white;
 `
+
+
+  
+
 const ContentName=styled.h2`
 
 `
@@ -118,7 +74,12 @@ const ContentDescription=styled.p`
 `
 
 
-//how to display object arrays in react using useState?
+
+//how to pass in img in styled components in react?
+
+
+
+
 
 
 
