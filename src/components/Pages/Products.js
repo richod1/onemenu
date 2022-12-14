@@ -27,6 +27,21 @@ function Products() {
                     <ContentDes></ContentDes>
                     <ContentP></ContentP>
                 </ContentCard>
+                <ContentCard>
+                    <ContentImg></ContentImg>
+                    <ContentDes></ContentDes>
+                    <ContentP></ContentP>
+                </ContentCard>
+                <ContentCard>
+                    <ContentImg></ContentImg>
+                    <ContentDes></ContentDes>
+                    <ContentP></ContentP>
+                </ContentCard>
+                <ContentCard>
+                    <ContentImg></ContentImg>
+                    <ContentDes></ContentDes>
+                    <ContentP></ContentP>
+                </ContentCard>
 
             </Content>
         </Container>
@@ -41,7 +56,7 @@ max-width:100%;
 display:flex;
 aliign-items:center;
 flex-direction:column;
-justify-content:center;
+justify-content:start;
 background:#010606;
 @media screen and(max-width:760px){
     height:110px;
@@ -64,7 +79,7 @@ const Content=styled.div`
 max-width:100%;
 margin:0;
 display:flex;
-// grid-templete-columns:1fr 1fr 1fr ;
+ grid-templete-columns:1fr 1fr 1fr ;
 align-items:center;
 justify-content:center;
 gap:16px;
